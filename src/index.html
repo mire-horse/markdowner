@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdowner</title>
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../node_modules/codemirror/theme/github.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Main content area -->
+    <div class="container">
+      <div class="toolbar">
+        <div class="file-info">
+          <span id="current-file">Untitled</span>
+          <span id="modified-indicator" class="hidden">*</span>
+        </div>
+        <div class="toolbar-buttons">
+          <button id="btn-bold" title="Bold (Ctrl+B)">B</button>
+          <button id="btn-italic" title="Italic (Ctrl+I)">I</button>
+          <button id="btn-heading" title="Heading (Ctrl+H)">H</button>
+          <button id="btn-link" title="Link (Ctrl+L)">🔗</button>
+          <button id="btn-image" title="Image">🖼️</button>
+          <button id="btn-code" title="Code">{ }</button>
+          <button id="btn-list" title="List">•</button>
+          <button id="btn-quote" title="Quote">❝</button>
+        </div>
+      </div>
+      
+      <div class="content-container">
+        <div class="editor-container">
+          <textarea id="editor"></textarea>
+        </div>
+        
+        <div class="preview-container">
+          <div id="preview" class="markdown-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CodeMirror Scripts -->
+  <script src="../node_modules/codemirror/lib/codemirror.js"></script>
+  <script src="../node_modules/codemirror/mode/markdown/markdown.js"></script>
+  <script src="../node_modules/codemirror/addon/edit/continuelist.js"></script>
+  <script src="../node_modules/codemirror/addon/selection/active-line.js"></script>
+  
+  <!-- Marked for Markdown parsing -->
+  <script src="../node_modules/marked/marked.min.js"></script>
+  
+  <!-- TurndownJS for HTML to Markdown conversion -->
+  <script src="../node_modules/turndown/dist/turndown.js"></script>
+  
+  <!-- Application Scripts -->
+  <script src="editor.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
