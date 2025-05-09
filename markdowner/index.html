@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;">
+    <title>Markdowner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title-bar">
+            <div class="title-bar-drag-area"></div>
+        </div>
+        <header>
+            <h1>Markdowner</h1>
+            <div class="toggle-container">
+                <button id="edit-mode" class="active">Edit Markdown</button>
+                <button id="preview-mode">Edit Preview</button>
+            </div>
+        </header>
+        <main>
+            <div id="editor-container" class="active">
+                <textarea id="markdown-editor" placeholder="Write your markdown here..."></textarea>
+            </div>
+            <div id="preview-container">
+                <div id="preview" contenteditable="false"></div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "markdowner",
+  "version": "1.0.0",
+  "description": "A simple side-by-side markdown editor for macOS that allows you to edit markdown and see the preview in real-time.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "package": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icon.icns --prune=true --out=release-builds",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown",
+    "editor",
+    "electron",
+    "macos"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^36.2.0"
+  }
+}
